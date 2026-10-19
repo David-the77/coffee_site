@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+     <!-- --------------Navigation bar --------------> 
+        <nav class="navbar">
+            <div class="logo">Ember & Oak</div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#visit">Visit</a>
+                <a href="#" class="btn-type1">Order Now</a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+        <!--- first section with the first view-->
+        <section id="hero">
+            <div class="hero-container">
+                <! ----left side of the first view---->
+                <div class="hero-leftside">
+                <span class="label">SMALL-BATCH ROASTERS</span>
+                
+                <h1> Small-batch coffee, brewed slowly.</h1>
+
+                <p>Fresh-roasted beans, pastries baked daily, and a warm corner to start your morning </p>
+
+                    <div class="hero-btns">
+                <a href="#menu" class="btn-type2">View Menu</a>
+                <a href="#visit" class="btn-type3">Find Us</a>
+                  </div>
+                  </div> 
+
+                  <!--right side of the first view-->
+                  <div class="hero-rightside">
+                      <img src="./pictures/Coffee lover graphic.jpg" alt="Coffee mug">
+                      <span class="hero-coffee-caption">Roasted fresh every morning </span>
+                  </div>
+                </div> 
+            </div>
+            
+        </section>
+
+        <section id="features">
+               <!----features section---->
+           <div class="features-container">
+            <div class="features-header">
+                <h2>Why you'll love us</h2>
+                <p>Three small things we refuse to copromise on</p>
+            </div>
+
+            <div class="features-grid">
+                <!----feature card 1---->
+                <div class="feature-card">
+                  <div class="roasted-beans"> <img src="./pictures/coffee beans.png" alt="Coffee Beans"> </div>  
+                  <h3>Fresh roasted</h3>
+                    <p>We roast our beans in small batches, every single morning.</p>
+                </div>
+
+                <!----feature card 2---->
+                <div class="feature-card">
+                  <div class="roasted-beans"> <img src="./pictures/coffee beans.png" alt="Coffee Beans"> </div>  
+                  <h3>Ethically sourced</h3>
+                    <p>Direct from farms we know and pay fairly, season after season.</p>
+                </div>
+
+                <!----feature card 3---->   
+                <div class="feature-card">
+                  <div class="roasted-beans"> <img src="./pictures/croisant.png" alt="Croissant"> </div>  
+                  <h3>Baked daily</h3>
+                    <p>Croissants, cookies and cakes from our own little oven..</p>
+                </div>
+            </div>
+           </div>
+
+
+        </section>
+
+        <section id="menu">
+         <div class="menu-container">
+            <div class="menu-header">
+                <h2>Menu</h2>
+                <p>A list of our amazing rich products</p>
+            </div>
+
+                <div class="menu-grid">
+                    <!-- Menu Card 1 -->
+                    <div class="menu-card">
+                        <img src="./pictures/espresso.jpg" alt="A small cup of dark espresso">
+                        <div class="menu-card-content">
+                            <h3>Espresso</h3>
+                            <p>Double shot, rich and bold.</p>
+                        </div>
+                        <span class="price">$3.00</span>
+                    </div>
+
+                    <!-- Menu Card 2 -->
+                    <div class="menu-card">
+                        <img src="./pictures/flat white.jpg" alt="A cup of flat white coffee with latte art">
+                        <div class="menu-card-content">
+                            <h3>Flat white</h3>
+                            <p>Velvety milk over two ristretto shots.</p>
+                        </div>
+                        <span class="price">$4.50</span>
+                    </div>
+
+                    <!-- Menu Card 3 -->
+                    <div class="menu-card">
+                        <img src="./pictures/ Cold Brew (1).jpg" alt="A tall glass of cold brew coffee with ice">
+                        <div class="menu-card-content">
+                            <h3>Cold brew</h3>
+                            <p>Steeped 18 hours, served over ice.</p>
+                        </div>
+                        <span class="price">$4.75</span>
+                    </div>
+
+                    <!-- Menu Card 4 -->
+                    <div class="menu-card">
+                        <img src="./pictures/croisant.jpg" alt="A freshly baked butter croissant">
+                        <div class="menu-card-content">
+                            <h3>Butter croissant</h3>
+                            <p>Baked fresh every morning.</p>
+                        </div>
+                        <span class="price">$3.80</span>
+                    </div>
+            </div>
+         </div>
+
+       
+        </section>
+
+        <section id="about">
+
+                 
+                <div class="about-container">
+                    <!-- Left side: Image -->
+                    <div class="about-leftside">
+                        <!-- Remember to add an image in your ./pictures/ folder! -->
+                        <img src="./pictures/Coffee shop.jpg" alt="Interior of the coffee shop">
+                    </div>
+                    
+                    <!-- Right side: Text -->
+                    <div class="about-rightside">
+                        <span class="label">OUR STORY</span>
+                        <h2>Roasted in small batches, served with care.</h2>
+                        <p>Ember& Oak started as a tiny cart with one grinder and a big idea: coffee should taste as good as it smells. Today we still roast every batch ourselves, right here in the shop.</p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </div>
+                </div>
+            
+        </section>
+
+        <section id="visit">
+             <div class="visit-header">
+                <h2>Visit Us</h2>
+                
+            </div>
+
+            
+                <div class="visit-container">
+                    <!-- Left side: Contact Form -->
+                    <div class="visit-form-card">
+                        
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                               
+                                <input type="email" id="email" name="email" placeholder="your email" required>
+                            </div>
+                            <div class="form-group">
+                                
+                                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-type1">Send message</button>
+                        </form>
+                    </div>
+
+                    <!-- Right side: Info Card -->
+                    <div class="visit-info-card">
+                        <div class="info-block">
+                            <h3>Opening hours</h3>
+                            <p>Monday to Friday: 8:00 to 17:00</p>
+                            <p>Saturday and Sunday: 8:00 to 16:00</p>
+                        </div>
+                        <div class="info-block">
+                            <h3>Find us</h3>
+                            <p>24 Market Street</p>
+                            <p>hello@emberandoak.example</p>
+                            <p>(555) 010-2024</p>
+                        </div>
+                    </div>
+                </div>
+            
+        </section>
+    </main>  
+
+    <footer>
+       <div class="container footer-wrapper">
+            <p>© 2026 Ember& Oak Coffee.</p>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>

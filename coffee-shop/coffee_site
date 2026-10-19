@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+     <!-- --------------Navigation bar --------------> 
+        <nav class="navbar">
+            <div class="logo">Coffee Shop</div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#visit">Visit</a>
+                <a href="#" class="btn-type1">Order Now</a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+        <!--- first section with the first view-->
+        <section id="hero">
+            <div class="hero-container">
+                <! ----left side of the first view---->
+                <div class="hero-leftside">
+                <span class="label">SMALL-BATCH ROASTERS</span>
+                
+                <h1> Small-batch coffee, brewed slowly.</h1>
+
+                <p>Fresh-roasted beans, pastries baked daily, and a warm corner to start your morning </p>
+
+                    <div class="hero-btns">
+                <a href="#menu" class="btn-type2">View Menu</a>
+                <a href="#visit" class="btn-type3">Find Us</a>
+                  </div>
+                  </div> 
+
+                  <!--right side of the first view-->
+                  <div class="hero-rightside">
+                      <img src="./pictures/coffee mug.jpg" alt="Coffee mug">
+                      <span class="hero-coffee-caption">Roasted fresh every morning </span>
+                  </div>
+                </div> 
+            </div>
+            
+        </section>
+
+        <section id="features">
+               <!----features section---->
+           <div class="features-container">
+            <div class="features-header">
+                <h2>Why you'll love us</h2>
+                <p>Three small things we refuse to copromise on</p>
+            </div>
+
+            <div class="features-grid">
+                <!----feature card 1---->
+                <div class="feature-card">
+                  <div class="roasted-beans"> <img src="./pictures/coffee beans.png" alt="Coffee Beans"> </div>  
+                  <h3>Fresh roasted</h3>
+                    <p>We roast our beans in small batches, every single morning.</p>
+                </div>
+
+                <!----feature card 2---->
+                <div class="feature-card">
+                  <div class="roasted-beans"> <img src="./pictures/coffee beans.png" alt="Coffee Beans"> </div>  
+                  <h3>Ethically sourced</h3>
+                    <p>Direct from farms we know and pay fairly, season after season.</p>
+                </div>
+
+                <!----feature card 3---->   
+                <div class="feature-card">
+                  <div class="roasted-beans"> <img src="./pictures/croisant.png" alt="Croissant"> </div>  
+                  <h3>Baked daily</h3>
+                    <p>Croissants, cookies and cakes from our own little oven..</p>
+                </div>
+            </div>
+           </div>
+
+
+        </section>
+
+        <section id="menu"></section>
+
+        <section id="about"></section>
+
+        <section id="visit"></section>
+    </main>  
+
+    <footer></footer>
+</body>
+</html>
