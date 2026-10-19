@@ -557,7 +557,63 @@ footer {
     padding: 6px 12px;
 }
 
+ /* 4. Features Mobile */
+  .features-grid {
+    grid-template-columns: 1fr; /* Changes from 3 columns to 1 single stacked column */
+    gap: 20px;
+  }
+  
+  .features-header h2 {
+    font-size: 28px; /* Shrinks the section heading */
+  }
+  
+  .feature-card {
+    padding: 24px; /* Reduces card padding slightly for mobile */
+  }
 
+
+  /* Menu Mobile */
+  .menu-grid {
+    grid-template-columns: 1fr; /* Stacks menu cards */
+    gap: 20px;
+    padding: 12px
+  }
+
+  .menu-card {
+    flex-direction: column; /* Stacks image and content */
+    padding: 12px 16px; /* Reduces padding for mobile */
+  }
+  .menu-header h2 {
+    font-size: 28px;
+  }
+
+  /* About Mobile */
+  .about-container {
+    flex-direction: column; /* Stacks image and text */
+    gap: 30px;
+  }
+  .about-leftside img {
+    height: 300px;
+  }
+  .about-rightside h2 {
+    font-size: 28px;
+  }
+
+  /* Visit Us Mobile */
+  .visit-container {
+    grid-template-columns: 1fr; /* Stacks form and info card */
+    gap: 20px;
+  }
+  .visit-form-card, .visit-info-card {
+    padding: 24px;
+  }
+
+  /* Footer Mobile */
+  .footer-wrapper {
+    flex-direction: column; /* Stacks copyright and links */
+    gap: 16px;
+    text-align: center;
+  }
 
 
 }
