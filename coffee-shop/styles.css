@@ -39,13 +39,25 @@ body {
 
 }
 
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--padding-dexktop);
 }
 
-h1, h2, h3, {
+h1, h2, h3 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--espresso);
@@ -79,9 +91,14 @@ header{
     gap: 32px;
 }
 
+.nav-toggle-checkbox,
+.nav-toggle {
+    display: none;
+}
+
 .nav-links a {
     text-decoration: none;
-    color: var(--espresso);
+    color: var(--caramel);
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -92,13 +109,14 @@ header{
 
 /* the first type of btn*/
 .btn-type1 {
-    background-color: var(--muted-brown);
-    color: var(--white);
+    background-color: var(--espresso);
+    color: white;
     padding: 12px 24px;
     border-radius: var(--radius-pill);
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.2s ease;
+
 }
 
 /*.btn-type1:hover {
@@ -134,12 +152,10 @@ header{
 }
 
 h1 {
-    font-size: 60px;
     margin-bottom: 24px;
 }
    
 #hero p {
-    font-size: 20px;
     margin-bottom: 32px;
     color: var(--muted-brown);
     max-width: 500px;
@@ -209,12 +225,10 @@ h1 {
 }
 
 .features-header h2 {
-    font-size: 40px;
     margin-bottom: 16px;
 }
 
 .features-header p {
-    font-size: 18px;
     color: var(--muted-brown);
     margin: 0;
 }
@@ -276,12 +290,10 @@ h1 {
 }
 
 .menu-header h2 {
-    font-size: 40px;
     margin-bottom: 16px;
 }
 
 .munu-header p {
-    font-size: 18px;
     color: var(--muted-brown);
     margin: 0;
 }
@@ -325,7 +337,6 @@ h1 {
 .menu-card p {
     color: var(--muted-brown);
     margin: 0;
-    font-size: 14px;
 }
 
 .price {
@@ -357,14 +368,12 @@ h1 {
 }
 
 .about-rightside h2 {
-    font-size: 40px;
     margin-bottom: 24px;
 }
 
 .about-rightside p {
     color: var(--muted-brown);
     margin-bottom: 24px;
-    font-size: 16px;
 }
 
 
@@ -397,7 +406,6 @@ h1 {
 }
 
 .visit-form-card h2{
-    font-size: 32px;
     margin-bottom: 24px;
 }
 
@@ -482,7 +490,6 @@ footer {
 
 .footer-wrapper p {
   margin: 0;
-  font-size: 14px;
 }
 
 .footer-links {
@@ -501,28 +508,111 @@ footer {
 @media (max-width: 768px) {
    
 
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 12px;
+}
+
 .container {
     padding: 0 var(--padding-mobile);
 
 }
 
+.hero-container,
+.features-container,
+.menu-container,
+.about-container,
 .visit-container {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 64px var(--padding-mobile);
+    padding: 24px;
 }
 
 /* Navigation for mobile*/
 .navbar {
+    position: relative;
     flex-wrap: wrap;
-    gap: 16px;
+}
+
+.nav-toggle-checkbox {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.nav-toggle {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--espresso);
+}
+
+.nav-toggle-icon {
+    position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    position: absolute;
+    left: 0;
+    content: "";
+}
+
+.nav-toggle-icon::before {
+    top: -7px;
+}
+
+.nav-toggle-icon::after {
+    top: 7px;
+}
+
+.nav-toggle-checkbox:focus-visible + .nav-toggle {
+    outline: 2px solid var(--caramel);
+    outline-offset: 4px;
 }
 
 .nav-links {
-    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 12px 16px;
+    gap: 0;
+    padding: 8px 0;
+}
+
+.nav-toggle-checkbox:checked ~ .nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 12px 0;
+}
+
+.nav-links .btn-type1 {
+    align-self: flex-start;
 }
 
 /*Hero mobile */
@@ -532,14 +622,8 @@ footer {
     gap: 40px;
 }
 
-.hero h1 {
-    font-size: 36px;
-    
-}
-
-.hero p {
-    font-size: 16px;
-    
+.hero-rightside img {
+    height: 300px;
 }
 
 .hero-btns {
@@ -557,36 +641,70 @@ footer {
     padding: 6px 12px;
 }
 
+
  /* 4. Features Mobile */
   .features-grid {
     grid-template-columns: 1fr; /* Changes from 3 columns to 1 single stacked column */
     gap: 20px;
   }
   
-  .features-header h2 {
-    font-size: 28px; /* Shrinks the section heading */
-  }
-  
   .feature-card {
-    padding: 24px; /* Reduces card padding slightly for mobile */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
   }
 
+  .roasted-beans {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .feature-card-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    flex: 1;
+  }
+
+  .feature-card-content h3,
+  .feature-card-content p {
+    display: block;
+    width: 100%;
+  }
+
+  .feature-card-content h3 {
+    margin-bottom: 8px;
+  }
 
   /* Menu Mobile */
   .menu-grid {
     grid-template-columns: 1fr; /* Stacks menu cards */
     gap: 20px;
-    padding: 12px
+    padding: 0;
   }
 
   .menu-card {
-    flex-direction: column; /* Stacks image and content */
-    padding: 12px 16px; /* Reduces padding for mobile */
-  }
-  .menu-header h2 {
-    font-size: 28px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: var(--cream);
   }
 
+  .menu-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-card-content {
+    min-width: 0;
+  }
+
+  .menu-card .price {
+    flex-shrink: 0;
+  }
   /* About Mobile */
   .about-container {
     flex-direction: column; /* Stacks image and text */
@@ -595,10 +713,6 @@ footer {
   .about-leftside img {
     height: 300px;
   }
-  .about-rightside h2 {
-    font-size: 28px;
-  }
-
   /* Visit Us Mobile */
   .visit-container {
     grid-template-columns: 1fr; /* Stacks form and info card */

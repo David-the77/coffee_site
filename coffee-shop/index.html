@@ -13,6 +13,10 @@
      <!-- --------------Navigation bar --------------> 
         <nav class="navbar">
             <div class="logo">Ember & Oak</div>
+            <input class="nav-toggle-checkbox" type="checkbox" id="nav-toggle">
+            <label class="nav-toggle" for="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </label>
             <div class="nav-links">
                 <a href="#hero">Home</a>
                 <a href="#features">Features</a>
@@ -65,22 +69,28 @@
                 <!----feature card 1---->
                 <div class="feature-card">
                   <div class="roasted-beans"> <img src="./pictures/coffee beans.png" alt="Coffee Beans"> </div>  
-                  <h3>Fresh roasted</h3>
+                  <div class="feature-card-content">
+                    <h3>Fresh roasted</h3>
                     <p>We roast our beans in small batches, every single morning.</p>
+                  </div>
                 </div>
 
                 <!----feature card 2---->
                 <div class="feature-card">
                   <div class="roasted-beans"> <img src="./pictures/coffee beans.png" alt="Coffee Beans"> </div>  
-                  <h3>Ethically sourced</h3>
+                  <div class="feature-card-content">
+                    <h3>Ethically sourced</h3>
                     <p>Direct from farms we know and pay fairly, season after season.</p>
+                  </div>
                 </div>
 
                 <!----feature card 3---->   
                 <div class="feature-card">
                   <div class="roasted-beans"> <img src="./pictures/croisant.png" alt="Croissant"> </div>  
-                  <h3>Baked daily</h3>
+                  <div class="feature-card-content">
+                    <h3>Baked daily</h3>
                     <p>Croissants, cookies and cakes from our own little oven..</p>
+                  </div>
                 </div>
             </div>
            </div>
