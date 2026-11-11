@@ -41,11 +41,11 @@ function calculateTotal(drink, size, quantity, isMember) {
   let total = (basePrice + getSizeChange(size)) * quantity;
 
   if (quantity >= 3) {
-    total = total * 0.90;
+    total = total * 0.90; //10% discount for 3 or more drinks
   }
 
   if (isMember) {
-    total = total * 0.85;
+    total = total * 0.95; // 5% discount for members
   }
 
   total = total * 1.08; //8% tax
@@ -60,11 +60,6 @@ function formatPrice(amount) {
 
 
 
-console.log(getDrinkPrice("latte"), getDrinkPrice("tea"));
-// 4.5 0
-
-console.log(getSizeChange("small"), getSizeChange("medium"), getSizeChange("large"));
-// -0.5 0 0.75
 
 
 //Strings
@@ -76,11 +71,11 @@ function formatName(name) {
 
 function makeOrderCode(name, drink, quantity) {
   return name.slice(0, 3).toUpperCase() + "-" + drink.slice(0, 3).toUpperCase() + "-" + quantity;
-}
+}// to create a unique name with the first 3 letters of the name and drink and the quantity of drinks ordered
 
 function receiptLine(label, amount) {
   return label.padEnd(16) + formatPrice(amount).padStart(8);
-}
+}// pad the rigjt side so that it is 16 characters long and pad the left side of the price so that it is 8 characters long
 
 
 function printReceipt(name, drink, size, quantity, isMember) {
@@ -102,7 +97,7 @@ function printReceipt(name, drink, size, quantity, isMember) {
 printReceipt("amina", "latte", "large", 2, true);
 
 
-
+//part 3
 //  Opening hours for the whole day
 console.log("== Opening hours");
 for (let hour = 0; hour <= 23; hour++) {
@@ -127,15 +122,23 @@ for (let hour = 0; hour <= 23; hour++) {
     openHoursCount++;
   }
 }
-console.log(openHoursCount);
+console.log("We are open for " + openHoursCount + " hours a day.");
+
+// Task B: A price table for 1 to 6 drinks
+console.log("== Price table");
+for (let qty = 1; qty <= 6; qty++) {
+  let label = (qty + " x large latte").padEnd(18);
+  let total = calculateTotal("latte", "large", qty, false);
+  console.log(label + formatPrice(total).padStart(8));
+}
 
 // Number check
 console.log("== Number check");
-console.log(calculateTotal("latte", "large", 2, false)); // null
+console.log(formatPrice(calculateTotal("latte", "large", 2, false))); // null
 
 
-console.log("== Number check");
-console.log(calculateTotal("espresso", "large", 3, true)); // null;
+
+console.log( formatPrice(calculateTotal("espresso", "large", 3, true))); // null;
 
 
 
