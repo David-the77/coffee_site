@@ -20,3 +20,12 @@ function makeCounter() {
 const c1 = makeCounter();
 const c2 = makeCounter();
 console.log(c1(), c1(), c2());
+// it prints 1, 2, 1 because c1 and c2 are different instances of the counter function
+
+
+for (var i = 1; i <= 3; i++) {
+  setTimeout(function () { console.log("var:", i); }, 100);
+}
+for (let j = 1; j <= 3; j++) {
+  setTimeout(function () { console.log("let:", j); }, 200);
+}
