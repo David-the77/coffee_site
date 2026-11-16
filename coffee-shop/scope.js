@@ -22,7 +22,17 @@ const c2 = makeCounter();
 console.log(c1(), c1(), c2());
 // it prints 1, 2, 1 because c1 and c2 are different instances of the counter function
 
+// Part 2: `let` is block-scoped, while `var` is not.
 
+if (true) {
+  let a = 1;
+  var b = 2;
+}
+
+console.log(b); // 2; `a` is only accessible inside the block.
+
+
+// piece 4
 for (var i = 1; i <= 3; i++) {
   setTimeout(function () { console.log("var:", i); }, 100);
 }
