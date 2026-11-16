@@ -48,7 +48,7 @@ function createOrderBook() {
   let nextId = 1;
 
   return {
-    // 1. addOrder
+    //  addOrder
     addOrder: function(customer, drink, quantity) {
       // Check if the drink exists on the menu
       const drinkInfo = menu.find(d => d.name === drink);
@@ -85,12 +85,12 @@ function createOrderBook() {
       return false; // Order not found
     },
 
-    // 3. getWaiting
+    //  getWaiting
     getWaiting: function() {
       return orders.filter(order => order.status === "waiting");
     },
 
-    // 4. getSummary
+    // getSummary
     getSummary: function() {
       const total = orders.length;
       const waiting = orders.filter(o => o.status === "waiting").length;
@@ -118,19 +118,32 @@ book.addOrder("Kofi", "espresso", 1);
 console.log(book.addOrder("Lea", "tea", 1)); 
 //  null (because "tea" is not on the menu)
 
-console.log(first.id, first.status, first.placedAt instanceof Date); 
+console.log("Current Order:", first.id, first.status, first.placedAt instanceof Date); 
 //  1 waiting true
 
 console.log(book.markReady(1), book.markReady(99)); 
 //  true false
 
-console.log(book.getWaiting().length); 
+console.log("Number of waiting orders:", book.getWaiting().length); 
 //  1 (Only Kofi's espresso is still waiting)
 
-console.log(book.getSummary()); 
+console.log("Order Summary:", book.getSummary()); 
 //  { total: 2, waiting: 1, ready: 1, revenue: 12 } 
-// (latte 4.50 * 2 = 9.00 + espresso 3.00 * 1 = 3.00 -> Total revenue: 12)
+
 
 console.log(book.orders); 
 //  undefined
+
+
+
+const stretch = createOrderBook();
+stretch.addOrder("Amina", "mocha", 1);   // Takes 3 seconds
+stretch.addOrder("Kofi", "espresso", 1); // Takes 1 second
+stretch.addOrder("Lea", "latte", 1);     // Takes 2 seconds
+
+console.log(stretch.getWaiting().length); 
+
+setTimeout(function () { 
+  console.log(stretch.getWaiting().length, stretch.getSummary()); 
+}, 3500);
 
