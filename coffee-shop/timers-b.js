@@ -47,3 +47,8 @@ orders.forEach(function (order) {
     waiting--;
   }, delayMs);
 });
+
+
+//Kofis order is ready first because his i sthe one that takes the least time to prepare which is 1 second.
+//  Amina's order takes 3 seconds to prepare and Lea's order takes 2 seconds to prepare. 
+// so the order of readiness will be Kofi, Lea, and then Amina. with the amount of time it took for each order to be ready being 1 second, 2 seconds, and 3 seconds respectively.
